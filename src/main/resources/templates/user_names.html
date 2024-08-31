@@ -1,18 +1,16 @@
 <!DOCTYPE html>
-<html lang="en"
-      xmlns:th="http://www.thymeleaf.org"
->
-  <head>
-      <meta charset="UTF-8">
-      <title>User Names</title>
-  </head>
-  <body>
-      <h2>User Details:</h2>
-      <div>
-        <p>Name: <strong th:text="${user.user_name}"></strong></p>
-        <p>Email: <strong th:text="${user.user_email}"></strong></p>
-        <p>Role: <strong th:text="${user.user_role}"></strong></p>
-        <p>Gender: <strong th:text="${user.user_gender}"></strong></p>
-      </div>
-  </body>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>User Names</title>
+    </head>
+    <body>
+        <h2>User Details:</h2>
+        <div th:object="${user}">
+            <p>Name: <strong th:text="*{user_name}"></strong></p>
+            <p>Email: <strong th:text="*{user_email}"></strong></p>
+            <p>Role: <strong th:text="*{user_role}"></strong></p>
+            <p>Gender: <strong th:text="*{user_gender}"></strong></p>
+        </div>
+    </body>
 </html>
