@@ -23,12 +23,25 @@
         </header>
         <main>
             <h2>User Details:</h2>
-            <div th:object="${user}">
-                <p>Name: <strong th:text="*{user_name}"></strong></p>
-                <p>Email: <strong th:text="*{user_email}"></strong></p>
-                <p>Role: <strong th:text="*{user_role}"></strong></p>
-                <p>Gender: <strong th:text="*{user_gender}"></strong></p>
-            </div>
+            <table class="table table-striped table-hover">
+                <thead class="table-dark">
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Gender</th>
+                </tr>
+                </thead>
+                <tbody>
+                <!-- Iterate over the list of users -->
+                <tr th:each="user : ${users}">
+                    <td><strong th:text="${user.user_name}"></strong></td>
+                    <td><strong th:text="${user.user_email}"></strong></td>
+                    <td><strong th:text="${user.user_role}"></strong></td>
+                    <td><strong th:text="${user.user_gender}"></strong></td>
+                </tr>
+                </tbody>
+            </table>
         </main>
         <footer></footer>
     </body>

@@ -7,13 +7,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class Controller_User {
-    @GetMapping("user_names")
-    public String user_names(Model model) {
+    @GetMapping("/user_name")
+    public String user_name(Model model) {
         Model_User user = new Model_User("Vic",
                 "vic.lim@icloud.com",
                 "ADMIN",
                 "MALE");
         model.addAttribute("user", user);
-        return "user_names";
+        return "user_name";
     }
 }
