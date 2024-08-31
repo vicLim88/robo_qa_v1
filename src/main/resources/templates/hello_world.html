@@ -1,12 +1,29 @@
 <!DOCTYPE html>
-<html lang="en"
-      xmlns:th="http://www.thymeleaf.org"
->
-<head>
-    <meta charset="UTF-8">
-    <title>Thymeleaf hello world example</title>
-</head>
-<body>
-    <h2 th:text="${message}"></h2>
-</body>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <meta charset="UTF-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <title>Robo QA</title>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" th:href="@{/}">Robo QA V1</a>
+                    </div>
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a th:href="@{/hello_world}">Hello World</a></li>
+                        <li><a th:href="@{/user_names}">User Names</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <h2 th:text="${message}"></h2>
+        </main>
+        <footer></footer>
+    </body>
 </html>

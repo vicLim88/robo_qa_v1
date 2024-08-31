@@ -12,29 +12,23 @@
             <nav class="navbar navbar-inverse">
                 <div class="container-fluid">
                     <div class="navbar-header">
-                        <a class="navbar-brand" href="#">Robo QA V1</a>
+                        <a class="navbar-brand" th:href="@{/}">Robo QA V1</a>
                     </div>
                     <ul class="nav navbar-nav">
-                        <li>
-                            <a th:href="@{/hello_world}">
-                                Hello World
-                            </a>
-                        </li>
-                        <li>
-                            <a th:href="@{/user_names}">
-                                User Names
-                            </a>
-                        </li>
+                        <li><a th:href="@{/hello_world}">Hello World</a></li>
+                        <li><a th:href="@{/user_names}">User Names</a></li>
                     </ul>
                 </div>
             </nav>
         </header>
         <main>
-
+            <div class="jumbotron text-center">
+                <h1>Robo QA V1</h1>
+                <p>The place where your applications can be automated</p>
+            </div>
         </main>
-        <div class="jumbotron text-center">
-            <h1>Robo QA V1</h1>
-            <p>The place where your applications can be automated</p>
-        </div>
+        <footer>
+
+        </footer>
     </body>
 </html>
