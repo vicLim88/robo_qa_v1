@@ -12,7 +12,8 @@ public class Controller_User {
         Model_User user = new Model_User("Vic",
                 "vic.lim@icloud.com",
                 "ADMIN",
-                "MALE");
+                "MALE",
+                "ADMIN");
         model.addAttribute("user", user);
         return "user_name";
     }
