@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <meta charset="UTF-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <title>Robo QA</title>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">Robo QA V1</a>
+                    </div>
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a th:href="@{/hello_world}">
+                                Hello World
+                            </a>
+                        </li>
+                        <li>
+                            <a th:href="@{/user_names}">
+                                User Names
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main>
+
+        </main>
+        <div class="jumbotron text-center">
+            <h1>Robo QA V1</h1>
+            <p>The place where your applications can be automated</p>
+        </div>
+    </body>
+</html>
